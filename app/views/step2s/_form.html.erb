@@ -1,0 +1,37 @@
+<%= form_for(@step2) do |f| %>
+  <% if @step2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@step2.errors.count, "error") %> prohibited this step2 from being saved:</h2>
+
+      <ul>
+      <% @step2.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :source_type %><br />
+    <%= f.text_field :source_type %>
+  </div>
+  <div class="field">
+    <%= f.label :source_location %><br />
+    <%= select_tag "source_location ", options_for_select([ "Choose Type", "FlatFile", "Excel", "Database", "recent_source" ]) %>
+  </div>
+  <div class="field">
+    <%= f.label :data_sample %><br />
+    <%= f.text_field :data_sample %>
+  </div>
+  <div class="field">
+    <%= f.label :source_info %><br />
+    <%= f.text_field :source_info %>
+  </div>
+  <div class="field">
+    <%= f.label :multiple_source %><br />
+    <%= f.text_field :multiple_source %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

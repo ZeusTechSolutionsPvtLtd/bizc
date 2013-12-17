@@ -1,0 +1,31 @@
+<h1>step1s</h1>
+
+<table>
+  <tr>
+    <th>Source type</th>
+    <th>Source location</th>
+    <th>Data sample</th>
+    <th>Source info</th>
+    <th>Multiple source</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @step2s.each do |step2| %>
+  <tr>
+    <td><%= step2.source_type %></td>
+    <td><%= step2.source_location %></td>
+    <td><%= step2.data_sample %></td>
+    <td><%= step2.source_info %></td>
+    <td><%= step2.multiple_source %></td>
+    <td><%= link_to 'Show', step2 %></td>
+    <td><%= link_to 'Edit', edit_step2_path(step2) %></td>
+    <td><%= link_to 'Destroy', step2, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'next Step2', new_step2_path %>

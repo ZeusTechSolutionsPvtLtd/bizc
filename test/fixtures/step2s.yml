@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  source_type: MyString
+  source_location: MyString
+  data_sample: MyString
+  source_info: MyString
+  multiple_source: MyString
+
+two:
+  source_type: MyString
+  source_location: MyString
+  data_sample: MyString
+  source_info: MyString
+  multiple_source: MyString
